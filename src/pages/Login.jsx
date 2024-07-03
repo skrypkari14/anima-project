@@ -6,8 +6,8 @@ import PrimaryButton from "../components/Button/PrimaryButton";
 
 const Login = () => {
     return (
-        <div className='flex min-h-screen justify-between'>
-            <div className='py-16 mx-auto max-w-[486px] w-full flex flex-col justify-between'>
+        <div className='flex min-h-screen justify-center lg:justify-between'>
+            <div className='py-16 px-5 lg:px-0 mx-auto max-w-[486px] w-full flex flex-col justify-between'>
                 <img alt={'logo'} src={logo} className={'max-w-[183px]'}/>
                 <div className={'flex flex-col gap-[36px]'}>
                     <div>
@@ -31,7 +31,7 @@ const Login = () => {
                     <div className='flex flex-col gap-[16px]'>
                         <PrimaryButton text={'Войти'}/>
                         <div className={'flex items-center justify-between text-[14px]'}>
-                            <p className={'text-[#66666E]'}>Нет аккаунта? <a href={'#'}className='text-[#FF0037]'>Регистрация</a></p>
+                            <p className={'text-[#66666E]'}>Нет аккаунта? <a href={'#'} className='text-[#FF0037]'>Регистрация</a></p>
                             <a href={'#'} className='text-[#FF0037]'>Забыли пароль?</a>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ const Login = () => {
                     Нажимая кнопку “Войти”, вы соглашаетесь с условиями
                 </p>
             </div>
-            <div className='w-1/2 bg-[#FF0037]'>
+            <div className='w-1/2 bg-[#FF0037] hidden lg:block'>
                 <div className={'min-h-screen bg-cover bg-no-repeat background'}/>
             </div>
         </div>
