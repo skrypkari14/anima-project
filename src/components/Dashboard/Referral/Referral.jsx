@@ -27,8 +27,7 @@ const Referral = () => {
         date: '28 Апреля 2024',
         status: 'inactive',
         earn: '492 ₽',
-    },
-        {
+    }, {
             name: 'eddie_lake',
             date: '28 Мая 2024',
             status: 'active',
