@@ -151,6 +151,7 @@ const Sidebar = () => {
                     </div>
                     <Link to={'/dashboard/subscription'}>
                         <div
+
                             className={'border py-[10px] mt-3 cursor-pointer flex gap-2 items-center justify-center bg-white rounded-md'}>
                             <div className='w-5 h-5 flex items-center'>
                                 <SubscriptionIcon
