@@ -6,12 +6,14 @@ import PrimaryButton from "../../Button/PrimaryButton";
 import SecondButton from "../../Button/SecondButton";
 import More from "../../../assets/icons/More";
 import Avatar from "react-avatar";
+import Select from "../../Select/Select";
 
 const Referral = () => {
     const [rangeValue, setRangeValue] = useState(15);
     const [discount, setDiscount] = useState(12);
     const [balance, setBalance] = useState(18);
     const [selectedTab, setSelectedTab] = useState(0);
+    const [isOpen, setOpen] = useState(false);
     const percentages = ['0%', '25%', '-26%', '-27%', '-28%', '-29%', '-30%', '-31%', '-32%', '-33%', '-34%'];
     const friendsInvited = 6;
     const [promocodes, setPromocodes] = useState([
@@ -35,6 +37,17 @@ const Referral = () => {
         }
     ])
 
+    const [items, setItems] = useState([
+        {
+            key: 'item1',
+            title: 'Premium (250 ₽)'
+        },
+        {
+            key: 'item2',
+            title: 'Business (600 ₽)'
+        }
+    ])
+
     const handleChange = (event) => {
         const newValue = event.target.value;
         setRangeValue(newValue);
@@ -48,10 +61,45 @@ const Referral = () => {
 
     return (
         <div className={'p-6'}>
+            {isOpen && (
+                <div className='fixed z-[100] w-screen h-screen bg-black/20 left-0 top-0 flex justify-center items-center'>
+                    <div className='bg-white max-w-[460px] w-full py-6 flex flex-col justify-center gap-6 rounded-md'>
+                        <h4 className='px-6 text-lg font-semibold text-[#222225]'>Создать промокод</h4>
+                        <div className={'px-6'}>
+                            <label>Введите промокод</label>
+                            <div className='h-10 px-2 border border-[#e2e2e5] rounded-md w-full mt-3'>
+                                <input placeholder='Введите промокод'
+                                       className='w-full h-10 outline-0 bg-transparent text-sm text-[#222225]'/>
+                            </div>
+                        </div>
+                        <div className='flex flex-col gap-3 px-6'>
+                            <label>Тип подписки</label>
+                            <Select items={items}/>
+                        </div>
+                        <div className='px-6'>
+                            <label>Количество активаций</label>
+                            <div className='h-10 px-2 border border-[#e2e2e5] rounded-md w-full mt-3'>
+                                <input placeholder='Введите количество активаций'
+                                       className='w-full h-10 outline-0 bg-transparent text-sm text-[#222225]'/>
+                            </div>
+                        </div>
+                        <div className='h-[1px] w-full bg-[#e2e2e5]'/>
+                        <div className={'px-6'}>
+                            <p className='text-sm text-[#66666e]'>Стоимость создания промокода</p>
+                            <p className='text-xl font-semibold text-[#222225] mt-3'>0 ₽</p>
+                        </div>
+                        <div className={'px-6 flex gap-3'}>
+                            <div className='w-[170px]'><PrimaryButton text={'Создать промокод'}/></div>
+                            <div className={'w-[90px]'}><SecondButton text={'Отмена'} onClick={() => {setOpen(false)}}/></div>
+                        </div>
+                    </div>
+                </div>
+            )}
             <div className='rounded-md bg-white'>
-                <img src={bg} alt='BG' className={'rounded-t-md'}/>
+                <img src={bg} alt='BG' className={'rounded-t-md w-full'}/>
                 <div className='pt-[84px] relative'>
-                    <span className='absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 text-3xl text-white font-semibold w-[96px] h-[96px] bg-[#ff0037] rounded-full flex items-center justify-center'>6</span>
+                    <span
+                        className='absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 text-3xl text-white font-semibold w-[96px] h-[96px] bg-[#ff0037] rounded-full flex items-center justify-center'>6</span>
                     <h4 className='text-2xl font-semibold text-[#222225] text-center'>Приглашайте друзей и получайте бонусы!</h4>
                     <p className='text-[#66666e] text-base text-center pt-3'>Пригласите еще 1 друга, чтобы получить скидку 25%!</p>
                     <div className={'flex justify-center gap-3 py-9'}>
@@ -101,7 +149,7 @@ const Referral = () => {
                                 <p className='text-base text-[#66666e] pt-1.5'>Баланс вашего партнерского кабинета</p>
                                 <div className='flex justify-items-center max-w-[350px] gap-3 my-6'>
                                     <PrimaryButton text={'Вывести средства'}/>
-                                    <SecondButton text={'Создать промокод'}/>
+                                    <SecondButton text={'Создать промокод'} onClick={() => {setOpen(true)}}/>
                                 </div>
                             </div>
                             <div className='w-full h-[1px] bg-[#e2e2e5]'></div>

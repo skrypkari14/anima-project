@@ -161,3 +161,16 @@ input[type=range]::-webkit-slider-thumb{
 .custom-checkbox input[type="checkbox"]:checked + .checkmark {
     transition: background-color 1.3s, border-color 1.3s, color 1.3s, transform 0.3s;
 }
+
+*{
+    scrollbar-width: 5px;
+}
+
+*::-webkit-scrollbar{
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2px;
+}

@@ -149,13 +149,16 @@ const Sidebar = () => {
                         <p className={'w-full py-1 text-[#66666e] cursor-pointer'}>Темная</p>
                         <p className={'w-full bg-white text-[#222225] py-1 cursor-pointer'}>Светлая</p>
                     </div>
-                    <div className={'border py-[10px] mt-3 cursor-pointer flex gap-2 items-center justify-center bg-white rounded-md'}>
-                        <div className='w-5 h-5 flex items-center'>
-                            <SubscriptionIcon
-                                className={`mx-auto fill-[#222225]`}/>
+                    <Link to={'/dashboard/subscription'}>
+                        <div
+                            className={'border py-[10px] mt-3 cursor-pointer flex gap-2 items-center justify-center bg-white rounded-md'}>
+                            <div className='w-5 h-5 flex items-center'>
+                                <SubscriptionIcon
+                                    className={`mx-auto fill-[#222225]`}/>
+                            </div>
+                            <p className={'text-[#222225] text-sm'}>Управление подпиской</p>
                         </div>
-                        <p className={'text-[#222225] text-sm'}>Управление подпиской</p>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
