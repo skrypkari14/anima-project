@@ -1,7 +1,7 @@
 import React from 'react';
 
 // IMG
-import logo from '../assets/logo_login.png'
+import logo from '../assets/logo.png'
 import PrimaryButton from "../components/Button/PrimaryButton";
 
 const Login = () => {
