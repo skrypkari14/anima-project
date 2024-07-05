@@ -207,6 +207,7 @@ const Navbar = () => {
                                 <p className="text-primary text-sm">Управление подпиской</p>
                             </div>
                         </Link>
+
                     </div>
                 </div>
             </div>
