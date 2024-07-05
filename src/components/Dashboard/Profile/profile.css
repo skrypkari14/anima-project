@@ -1,0 +1,18 @@
+.upload::-webkit-file-upload-button{
+    visibility: hidden;
+}
+
+.upload::before {
+    content: 'Загрузить файл';
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #e2e2e5;
+    border-radius: 6px;
+    padding: 10px 20px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+}
