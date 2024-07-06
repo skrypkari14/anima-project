@@ -2,17 +2,16 @@ import React from 'react';
 import Avatar from "react-avatar";
 import ProfileCalendar from "../../../assets/icons/ProfileCalendar";
 import ProfileSettings from "../../../assets/icons/ProfileSettings";
-import More from "../../../assets/icons/More";
 import MessageCard from "./MessageCard";
 import {Link} from "react-router-dom";
 
 const Profile = () => {
     return (
         <div className='p-6'>
-            <div className='p-6 mt-6 bg-white items-center text-center md:text-left md:items-start rounded-md flex flex-col gap-6'>
+            <div className='p-6 mt-6 bg-white dark:bg-neutral items-center text-center md:text-left md:items-start rounded-md flex flex-col gap-6'>
                 <Avatar size={128} src={'https://api.dicebear.com/9.x/initials/svg?seed=Sunshine'} round={true}/>
                 <div>
-                    <h4 className='text-[#000] text-2xl font-semibold'>sunshine</h4>
+                    <h4 className='text-[#000] dark:text-white text-2xl font-semibold'>sunshine</h4>
                     <p className='text-secondary text-sm'>люблю играть с читом Deseption</p>
                 </div>
                 <div className='flex flex-col md:flex-row items-center gap-2 text-secondary text-sm'>
@@ -29,9 +28,9 @@ const Profile = () => {
                     <p>Редактировать профиль</p>
                 </Link>
             </div>
-            <div className='mt-6 px-6 py-3 bg-white rounded-md flex gap-3'>
+            <div className='mt-6 px-6 py-3 bg-white dark:bg-neutral rounded-md flex gap-3'>
                 <Avatar className='flex-none' size={40} src={'https://api.dicebear.com/9.x/initials/svg?seed=Sunshine'} round={true}/>
-                <input className='outline-0 w-full text-sm' placeholder={'Напишите сообщение в профиле...'}/>
+                <input className='outline-0 bg-transparent dark:text-white w-full text-sm' placeholder={'Напишите сообщение в профиле...'}/>
             </div>
             <div className='mt-3 flex flex-col gap-3'>
                 <MessageCard

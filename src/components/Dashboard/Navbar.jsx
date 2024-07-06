@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Avatar from 'react-avatar';
 import {Link, useLocation} from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
@@ -20,16 +20,40 @@ import { MdOutlineCancel } from "react-icons/md";
 
 const Navbar = () => {
     const location = useLocation();
-    const darkMode = false;
+    const [darkMode, setDarkMode] = useState(true);
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            setDarkMode(true);
+            document.documentElement.classList.add('dark');
+        } else {
+            setDarkMode(false);
+            document.documentElement.classList.remove('dark');
+        }
+    }, []);
+
+    const enableDarkMode = () => {
+        setDarkMode(true);
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.classList.add('dark');
+    };
+
+    const disableDarkMode = () => {
+        setDarkMode(false);
+        localStorage.setItem('theme', 'light');
+        document.documentElement.classList.remove('dark');
+    };
+
     return (
-        <div className="px-6 py-3 dark:bg-primary border-b flex items-center justify-between border-subtle dark:border-[#444449]">
+        <div className="px-6 py-3 border-b flex items-center justify-between border-subtle dark:border-[#444449]">
             <div
-                className={`z-[1001] transition-all fixed min-h-screen max-w-96 w-full bg-white top-0 overflow-hidden left-0 bottom-0 border border-subtle ${open? 'translate-x-0' : '-translate-x-full'}`}>
+                className={`z-[1001] transition-all dark:bg-primary fixed min-h-screen max-w-96 w-full bg-white top-0 overflow-hidden left-0 bottom-0 border-r dark:border-secondary border-subtle ${open? 'translate-x-0' : '-translate-x-full'}`}>
                 <div
                     className="flex px-6 py-4 items-center justify-between border-b border-subtle dark:border-[#444449] ">
                     <img src={darkMode ? logo_white : logo} className='scale-75' alt="logo"/>
-                    <MdOutlineCancel className='text-xl text-primary' onClick={() => setOpen(false)}/>
+                    <MdOutlineCancel className='text-xl text-primary dark:text-white' onClick={() => setOpen(false)}/>
                 </div>
                 <div className="flex flex-col justify-between sidebarHeight p-6">
                     <div>
@@ -194,9 +218,11 @@ const Navbar = () => {
                         <div
                             className="flex justify-between border border-subtle dark:border-[#444449]  rounded-[6px] p-1 text-center text-sm font-medium">
                             <p
+                                onClick={enableDarkMode}
                                 className={`transition-all w-full py-1 cursor-pointer ${darkMode ? 'text-primary dark:text-white bg-white dark:bg-neutral rounded' : 'dark:text-surface text-secondary'}`}>Темная</p>
                             <p
-                                className={`transition-all w-full text-primary py-1 cursor-pointer ${!darkMode ? 'text-primary dark:text-white bg-white dark:bg-neutral rounded' : 'dark:text-surface'}`}>Светлая</p>
+                                onClick={disableDarkMode}
+                                className={`transition-all w-full text-primary py-1 cursor-pointer ${!darkMode ? 'text-primary dark:text-white bg-subtle dark:bg-neutral rounded' : 'dark:text-surface'}`}>Светлая</p>
                         </div>
                         <Link onClick={() => setOpen(false)} to="/dashboard/subscription">
                             <div
@@ -212,10 +238,10 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='flex gap-2 items-center'>
-                <IoMdMenu className='text-2xl xl:hidden cursor-pointer' onClick={() => setOpen(true)}/>
+                <IoMdMenu className='text-2xl dark:text-white xl:hidden cursor-pointer' onClick={() => setOpen(true)}/>
                 <div
                     className="sm:block hidden h-10 max-w-80 dark:bg-neutral w-full bg-white rounded-md border border-subtle dark:border-[#444449]">
-                    <input className="bg-transparent outline-0 h-full px-2 text-sm"/>
+                    <input className="bg-transparent dark:text-white outline-0 h-full px-2 text-sm"/>
                 </div>
             </div>
             <div className="flex items-center gap-3">
