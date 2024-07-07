@@ -20,7 +20,6 @@ const Sidebar = () => {
     const location = useLocation();
     const [darkMode, setDarkMode] = useState(false);
 
-
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {

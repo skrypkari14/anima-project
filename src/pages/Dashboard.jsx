@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Sidebar from "../components/Dashboard/Sidebar";
 import Navbar from "../components/Dashboard/Navbar";
 import {Routes, Route} from "react-router-dom";
@@ -13,11 +13,15 @@ import Settings from "../components/Dashboard/Profile/Settings";
 import User from "../components/Dashboard/User/User";
 import Friends from "../components/Dashboard/Friends/Friends";
 import Config from "../components/Dashboard/Config/Config";
+import {ToastContainer} from "react-toastify";
+
 
 
 const Dashboard = () => {
+
     return (
         <div className={'min-w-screen min-h-screen bg-[#F1F1F2]'}>
+            <ToastContainer />
             <Sidebar/>
             <div className='xl:pl-[280px] dark:bg-primary min-h-screen'>
                 <Navbar/>

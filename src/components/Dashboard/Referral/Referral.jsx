@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 
 //IMG
 import bg from '../../../assets/referral.png'
@@ -7,15 +7,17 @@ import SecondButton from "../../Button/SecondButton";
 import More from "../../../assets/icons/More";
 import Avatar from "react-avatar";
 import Select from "../../Select/Select";
+import {DataContext} from "../../../context/DataProvider";
 
 const Referral = () => {
-    const [rangeValue, setRangeValue] = useState(15);
+    const {userInfo} = useContext(DataContext);
+    const [rangeValue, setRangeValue] = useState(userInfo.refprocent || 0);
     const [discount, setDiscount] = useState(12);
     const [balance, setBalance] = useState(18);
     const [selectedTab, setSelectedTab] = useState(0);
     const [isOpen, setOpen] = useState(false);
     const percentages = ['0%', '25%', '-26%', '-27%', '-28%', '-29%', '-30%', '-31%', '-32%', '-33%', '-34%'];
-    const friendsInvited = 6;
+    const friendsInvited = userInfo.refusers || 0;
     const [promocodes, setPromocodes] = useState([
         {
             name: 'SPRING24',
@@ -55,9 +57,10 @@ const Referral = () => {
     };
 
     useEffect(() => {
-        setDiscount(parseInt(0 + rangeValue))
-        setBalance(parseInt(30-rangeValue));
+        setDiscount(parseInt(0 + rangeValue));
+        setBalance(userInfo.refprocent ? parseInt(userInfo.refprocent - rangeValue) : 0 - rangeValue);
     }, [rangeValue]);
+
 
     return (
         <div className={'p-6'}>
@@ -99,7 +102,7 @@ const Referral = () => {
                 <img src={bg} alt='BG' className={'rounded-t-md w-full hidden md:block'}/>
                 <div className='pt-[84px] px-2 relative'>
                     <span
-                        className='absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 text-3xl text-white font-semibold w-[96px] h-[96px] bg-alert rounded-full flex items-center justify-center'>6</span>
+                        className='absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 text-3xl text-white font-semibold w-[96px] h-[96px] bg-alert rounded-full flex items-center justify-center'>{userInfo.refusers || 0}</span>
                     <h4 className='text-2xl font-semibold text-primary dark:text-white text-center'>Приглашайте друзей и получайте бонусы!</h4>
                     <p className='text-secundary dark:text-surface text-base text-center pt-3'>Пригласите еще 1 друга, чтобы получить скидку 25%!</p>
                     <div className={'flex flex-col md:flex-row justify-center gap-3 py-9'}>
@@ -113,19 +116,19 @@ const Referral = () => {
                 </div>
                 <div className='px-6 md:h-32 md:py-0 md:gap-0 py-4 gap-4 grid grid-cols-1 md:grid-cols-4 border-t border-subtle dark:border-secondary'>
                     <div className='flex flex-col justify-center items-center gap-1.5'>
-                        <p className={'text-primary font-semibold text-xl dark:text-white'}>30%</p>
+                        <p className={'text-primary font-semibold text-xl dark:text-white'}>{userInfo.refprocent ? `${userInfo.refprocent} %` : '0 %'}</p>
                         <p className={'text-secondary text-sm'}>Ваша скидка</p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-1.5'>
-                        <p className={'text-primary font-semibold text-xl dark:text-white'}>6</p>
+                        <p className={'text-primary font-semibold text-xl dark:text-white'}>{userInfo.refusers || 0}</p>
                         <p className={'text-secondary text-sm'}>Друзей приглашено</p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-1.5'>
-                        <p className={'text-primary font-semibold text-xl dark:text-white'}>6</p>
+                        <p className={'text-primary font-semibold text-xl dark:text-white'}>{userInfo.reflvl || 0}</p>
                         <p className={'text-secondary text-sm'}>Ваш уровень</p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-1.5'>
-                        <p className={'text-primary font-semibold text-xl dark:text-white'}>34</p>
+                        <p className={'text-primary font-semibold text-xl dark:text-white'}>{userInfo.reftransition || 0}</p>
                         <p className={'text-secondary text-sm'}>Переходов по Вашей ссылке</p>
                     </div>
                 </div>
@@ -145,7 +148,7 @@ const Referral = () => {
                     <div className='mt-3'>
                         <div className={'rounded-md py-6 bg-white dark:bg-neutral'}>
                             <div className='px-6 text-center md:text-left'>
-                                <h4 className='text-xl font-semibold text-primary dark:text-white'>240 ₽</h4>
+                                <h4 className='text-xl font-semibold text-primary dark:text-white'>{userInfo.refbalance ? `${userInfo.refbalance} ₽` : '0 ₽'}</h4>
                                 <p className='text-base text-secondary pt-1.5'>Баланс вашего партнерского кабинета</p>
                                 <div className='flex flex-col md:flex-row justify-center mx-auto md:mx-0 max-w-[350px] gap-3 my-6'>
                                     <PrimaryButton text={'Вывести средства'}/>
@@ -240,8 +243,8 @@ const Referral = () => {
                                     процент, потратив его на получение скидки или выбрав доходность с промокода</p>
                             </div>
                             <div className='flex flex-col gap-6 mt-6'>
-                                <p className={'text-sm font-medium text-primary dark:text-white'}>У вас: 30%</p>
-                                <input type={"range"} max={30} min={0} defaultValue={12}
+                                <p className={'text-sm font-medium text-primary dark:text-white'}>У вас: {userInfo.refprocent ? `${userInfo.refprocent} %` : '0 %'}</p>
+                                <input type={"range"} max={userInfo.refprocent || 0} min={0}
                                        className='w-full appearance-none bg-subtle dark:bg-surface h-1.5 rounded-md'
                                        onChange={handleChange}/>
                                 <div className={'text-primary dark:text-white flex text-sm font-medium flex-col md:flex-row gap-4 justify-between items-center'}>

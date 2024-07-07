@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Avatar from 'react-avatar';
 import {Link, useLocation} from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
@@ -16,9 +16,11 @@ import SettingsIcon from "../../assets/icons/SettingsIcon";
 import SupportIcon from "../../assets/icons/SupportIcon";
 import SubscriptionIcon from "../../assets/icons/SubscriptionIcon";
 import { MdOutlineCancel } from "react-icons/md";
+import {DataContext} from "../../context/DataProvider";
 
 
 const Navbar = () => {
+    const {userInfo} = useContext(DataContext);
     const location = useLocation();
     const [darkMode, setDarkMode] = useState(true);
     const [open, setOpen] = useState(false);
@@ -246,7 +248,7 @@ const Navbar = () => {
             </div>
             <div className="flex items-center gap-3">
                 <div className="flex flex-col text-right">
-                    <span className="font-medium text-sm dark:text-white">sunshine</span>
+                    <span className="font-medium text-sm dark:text-white">{userInfo.Username || 'username'}</span>
                     <span className="text-sm text-secondary dark:text-surface">
                         Premium <span className="text-alert">5 дней</span>
                     </span>
