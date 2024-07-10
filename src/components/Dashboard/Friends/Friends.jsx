@@ -40,7 +40,7 @@ const Friends = () => {
                             <div className='h-10 px-2 border border-subtle dark:border-secondary rounded-md w-full mt-3'>
                                 <input
                                     placeholder='Введите никнейм друга'
-                                    className='w-full h-10 outline-0 bg-transparent text-sm text-primary dark:text-white'
+                                    className='w-full h-10 outline-none appearance-none bg-transparent text-sm text-primary dark:text-white'
                                 />
                             </div>
                         </div>

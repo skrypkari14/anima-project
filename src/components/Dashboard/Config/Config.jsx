@@ -53,7 +53,7 @@ const Config = () => {
                             <label>Название конфига</label>
                             <div className='h-10 px-2 border border-subtle rounded-md w-full mt-3'>
                                 <input placeholder='Введите название'
-                                       className='w-full h-10 outline-0 bg-transparent text-sm text-primary dark:text-subtle'/>
+                                       className='w-full h-10 outline-none appearance-none bg-transparent text-sm text-primary dark:text-subtle'/>
                             </div>
                         </div>
                         <div className={'px-6 pt-6 flex gap-3'}>

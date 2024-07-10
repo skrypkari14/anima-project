@@ -84,13 +84,13 @@ const Login = () => {
                         <div>
                             <label className={'text-[#66666E] text-[14px] font-medium'}>Логин</label>
                             <div className='h-[40px] border rounded-[6px] border-[#E2E2E5] mt-[6px]'>
-                                <input className='outline-0 h-full w-full px-2' value={inputLogin} onChange={(e) => {setInputLogin(e.target.value)}} placeholder={'Введите логин'}/>
+                                <input className='outline-none appearance-none h-full w-full px-2' value={inputLogin} onChange={(e) => {setInputLogin(e.target.value)}} placeholder={'Введите логин'}/>
                             </div>
                         </div>
                         <div>
                             <label className={'text-[#66666E] text-[14px] font-medium'}>Пароль</label>
                             <div className='h-[40px] border rounded-[6px] border-[#E2E2E5] mt-[6px]'>
-                                <input className='outline-0 h-full w-full px-2' type={'password'} value={inputPassword} onChange={(e) => {setInputPassword(e.target.value)}} placeholder={'Введите пароль'}/>
+                                <input className='outline-none appearance-none h-full w-full px-2' type={'password'} value={inputPassword} onChange={(e) => {setInputPassword(e.target.value)}} placeholder={'Введите пароль'}/>
                             </div>
                         </div>
                     </div>

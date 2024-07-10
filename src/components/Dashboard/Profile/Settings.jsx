@@ -35,25 +35,25 @@ const Settings = () => {
                 <div className='dark:text-white'>
                     <label>Имя пользователя</label>
                     <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
-                        <input className='outline-0 h-10 w-full bg-transparent' placeholder={'Введите логин'}/>
+                        <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Введите логин'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Описание</label>
                     <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
-                        <input className='outline-0 h-10 w-full bg-transparent' placeholder={'Введите описание'}/>
+                        <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Введите описание'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Ссылка на профиль</label>
                     <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
-                        <input className='outline-0 h-10 w-full bg-transparent' placeholder={'deseption.ru/sunshine'}/>
+                        <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'deseption.ru/sunshine'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>CSS-код для ника</label>
                     <textarea
-                        className='outline-0 border border-[#e2e2e5] mt-1.5 p-3 rounded-md h-56 w-full bg-transparent'
+                        className='outline-none appearance-none border border-[#e2e2e5] mt-1.5 p-3 rounded-md h-56 w-full bg-transparent'
                         placeholder={'Введите CSS-код'}/>
                 </div>
                 <button
@@ -66,19 +66,19 @@ const Settings = () => {
                 <div className='dark:text-white'>
                     <label>Старый пароль</label>
                     <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
-                        <input className='outline-0 h-10 w-full bg-transparent' placeholder={'Старый пароль'}/>
+                        <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Старый пароль'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Новый пароль</label>
                     <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
-                        <input className='outline-0 h-10 w-full bg-transparent' placeholder={'Новый пароль'}/>
+                        <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Новый пароль'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Повторите новый пароль</label>
                     <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
-                        <input className='outline-0 h-10 w-full bg-transparent' placeholder={'Повторите новый пароль'}/>
+                        <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Повторите новый пароль'}/>
                     </div>
                 </div>
                 <button

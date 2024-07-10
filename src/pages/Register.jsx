@@ -118,7 +118,7 @@ const Register = () => {
                         <div>
                             <label className={'text-[#66666E] text-[14px] font-medium'}>Email</label>
                             <div className='h-[40px] border rounded-[6px] border-[#E2E2E5] mt-[6px]'>
-                                <input className='outline-0 h-full w-full px-2' value={inputEmail} onChange={(e) => {
+                                <input className='outline-none appearance-none h-full w-full px-2' value={inputEmail} onChange={(e) => {
                                     setInputEmail(e.target.value)
                                 }} placeholder={'Введите свою почту'}/>
                             </div>
@@ -126,7 +126,7 @@ const Register = () => {
                         <div>
                             <label className={'text-[#66666E] text-[14px] font-medium'}>Логин</label>
                             <div className='h-[40px] border rounded-[6px] border-[#E2E2E5] mt-[6px]'>
-                                <input className='outline-0 h-full w-full px-2' value={inputLogin} onChange={(e) => {
+                                <input className='outline-none appearance-none h-full w-full px-2' value={inputLogin} onChange={(e) => {
                                     setInputLogin(e.target.value)
                                 }} placeholder={'Введите логин'}/>
                             </div>
@@ -134,7 +134,7 @@ const Register = () => {
                         <div>
                             <label className={'text-[#66666E] text-[14px] font-medium'}>Пароль</label>
                             <div className='h-[40px] border rounded-[6px] border-[#E2E2E5] mt-[6px]'>
-                                <input className='outline-0 h-full w-full px-2' type={'password'} value={inputPassword}
+                                <input className='outline-none appearance-none h-full w-full px-2' type={'password'} value={inputPassword}
                                        onChange={(e) => {
                                            setInputPassword(e.target.value)
                                        }} placeholder={'Введите пароль'}/>
@@ -143,7 +143,7 @@ const Register = () => {
                         <div>
                             <label className={'text-[#66666E] text-[14px] font-medium'}>Повторите пароль</label>
                             <div className='h-[40px] border rounded-[6px] border-[#E2E2E5] mt-[6px]'>
-                                <input className='outline-0 h-full w-full px-2' type={'password'} value={inputConfirmPassword}
+                                <input className='outline-none appearance-none h-full w-full px-2' type={'password'} value={inputConfirmPassword}
                                        onChange={(e) => {
                                            setInputConfirmPassword(e.target.value)
                                        }} placeholder={'Повторите пароль'}/>

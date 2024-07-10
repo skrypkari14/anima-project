@@ -54,7 +54,7 @@ const User = () => {
             <div className='mt-6 px-6 py-3 bg-white dark:bg-neutral rounded-md flex gap-3'>
                 <Avatar className='flex-none' size={40} src={'https://api.dicebear.com/9.x/initials/svg?seed=Sunshine'}
                         round={true}/>
-                <input className='outline-0 bg-transparent dark:text-white w-full text-sm'
+                <input className='outline-none appearance-none bg-transparent dark:text-white w-full text-sm'
                        placeholder={'Напишите сообщение в профиле...'}/>
             </div>
             <div className='mt-3 flex flex-col gap-3'>

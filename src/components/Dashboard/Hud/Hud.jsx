@@ -34,7 +34,12 @@ const Hud = () => {
             </div>
             <div className='pt-3 flex flex-col gap-3'>
                 <div className='bg-white dark:bg-neutral rounded-md flex justify-between items-center p-6'>
-                    <h4 className='text-base font-medium text-primary dark:text-white'>Keystrokes</h4>
+                    <div className="flex flex-col w-3/5">
+                        <h4 className="text-base font-medium text-primary dark:text-white">Keystrokes</h4>
+                        <p className="text-sm text-secondary">
+                            Обводка ваших клавиш на экране в режиме худа
+                        </p>
+                    </div>
                     <label className='switch'>
                         <input type='checkbox'/>
                         <span className='slider'></span>
@@ -42,7 +47,12 @@ const Hud = () => {
                     </label>
                 </div>
                 <div className='bg-white dark:bg-neutral rounded-md flex justify-between items-center p-6'>
-                    <h4 className='text-base font-medium text-primary dark:text-white'>FPS Counter</h4>
+                    <div className="flex flex-col w-3/5">
+                        <h4 className="text-base font-medium text-primary dark:text-white">FPS Counter</h4>
+                        <p className="text-sm text-secondary">
+                            Красивый вывод вашего ФПС в стилистике проекта
+                        </p>
+                    </div>
                     <label className='switch'>
                         <input type='checkbox'/>
                         <span className='slider'></span>

@@ -48,6 +48,8 @@ const Navbar = () => {
         document.documentElement.classList.remove('dark');
     };
 
+    const {selectedFps, setSelectedFps} = useContext(DataContext)
+
     return (
         <div className="px-6 py-3 border-b flex items-center justify-between border-subtle dark:border-[#444449]">
             <div
@@ -163,10 +165,14 @@ const Navbar = () => {
                                 </div>
                                 <div
                                     className="border border-subtle dark:border-[#444449]  rounded-[4px] flex text-[12px] dark:text-surface font-medium p-[0.5px]">
-                                    <p className="py-0.5 px-2 bg-white dark:bg-neutral rounded-[2px] cursor-pointer">Выкл</p>
-                                    <p className="py-0.5 px-2 cursor-pointer">1</p>
-                                    <p className="py-0.5 px-2 cursor-pointer">2</p>
-                                    <p className="py-0.5 px-2 cursor-pointer">3</p>
+                                    <p onClick={() => setSelectedFps(0)}
+                                       className={`transition-all py-0.5 px-2 cursor-pointer ${selectedFps === 0 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>Выкл</p>
+                                    <p onClick={() => setSelectedFps(1)}
+                                       className={`transition-all w-6 flex items-center justify-center py-0.5 px-2 cursor-pointer ${selectedFps === 1 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>1</p>
+                                    <p onClick={() => setSelectedFps(2)}
+                                       className={`transition-all w-6 flex items-center justify-center py-0.5 px-2 cursor-pointer ${selectedFps === 2 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>2</p>
+                                    <p onClick={() => setSelectedFps(3)}
+                                       className={`transition-all w-6 flex items-center justify-center py-0.5 px-2 cursor-pointer ${selectedFps === 3 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>3</p>
                                 </div>
                             </div>
                         </div>
@@ -243,7 +249,7 @@ const Navbar = () => {
                 <IoMdMenu className='text-2xl dark:text-white xl:hidden cursor-pointer' onClick={() => setOpen(true)}/>
                 <div
                     className="sm:block hidden h-10 max-w-80 dark:bg-neutral w-full bg-white rounded-md border border-subtle dark:border-[#444449]">
-                    <input className="bg-transparent dark:text-white outline-0 h-full px-2 text-sm"/>
+                    <input className="bg-transparent dark:text-white h-full px-2 text-sm outline-none appearance-none"/>
                 </div>
             </div>
             <div className="flex items-center gap-3">

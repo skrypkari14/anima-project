@@ -16,6 +16,8 @@ const DataProvider = ({ children }) => {
         refusers: 6
     });
 
+    const [selectedFps, setSelectedFps] = useState(0);
+
     const fetchUserInfo = async () => {
         try{
             const response = await axios.get('/api/v1/profile/self');
@@ -39,8 +41,10 @@ const DataProvider = ({ children }) => {
     useEffect(() => {
 
     })
+
+
     return (
-        <DataContext.Provider  value={{ userInfo }}>
+        <DataContext.Provider  value={{ userInfo, selectedFps, setSelectedFps }}>
             { children }
         </DataContext.Provider>
     );

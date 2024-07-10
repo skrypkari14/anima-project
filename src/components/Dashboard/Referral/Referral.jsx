@@ -72,7 +72,7 @@ const Referral = () => {
                             <label>Введите промокод</label>
                             <div className='h-10 px-2 border border-subtle rounded-md w-full mt-3'>
                                 <input placeholder='Введите промокод'
-                                       className='w-full h-10 outline-0 bg-transparent dark:text-white text-sm text-primary'/>
+                                       className='w-full h-10 outline-none appearance-none bg-transparent dark:text-white text-sm text-primary'/>
                             </div>
                         </div>
                         <div className='flex dark:text-white flex-col gap-3 px-6'>
@@ -83,7 +83,7 @@ const Referral = () => {
                             <label>Количество активаций</label>
                             <div className='h-10 px-2 border border-subtle rounded-md w-full mt-3'>
                                 <input placeholder='Введите количество активаций'
-                                       className='w-full h-10 outline-0 dark:text-white  bg-transparent text-sm text-primary'/>
+                                       className='w-full h-10 outline-none appearance-none dark:text-white  bg-transparent text-sm text-primary'/>
                             </div>
                         </div>
                         <div className='h-[1px] w-full bg-subtle'/>
@@ -107,7 +107,7 @@ const Referral = () => {
                     <p className='text-secundary dark:text-surface text-base text-center pt-3'>Пригласите еще 1 друга, чтобы получить скидку 25%!</p>
                     <div className={'flex flex-col md:flex-row justify-center gap-3 py-9'}>
                         <div className='md:max-w-[450px] h-10 px-2 border border-subtle rounded-md w-full'>
-                            <input defaultValue={'deseption.com/?ref=123123'} className='w-full h-10 outline-0 bg-transparent text-sm text-primary dark:text-white'/>
+                            <input defaultValue={'deseption.com/?ref=123123'} className='w-full h-10 outline-none appearance-none bg-transparent text-sm text-primary dark:text-white'/>
                         </div>
                         <div className='md:max-w-[130px] w-full'>
                             <PrimaryButton text={'Скопировать'}/>
