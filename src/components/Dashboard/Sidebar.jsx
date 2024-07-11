@@ -198,7 +198,7 @@ const Sidebar = () => {
                             className={`transition-all w-full py-1 cursor-pointer ${darkMode ? 'text-primary dark:text-white bg-white dark:bg-neutral rounded' : 'dark:text-surface text-secondary'}`}>Темная</p>
                         <p
                             onClick={disableDarkMode}
-                            className={`transition-all w-full text-primary py-1 cursor-pointer ${!darkMode ? 'text-primary dark:text-white bg-subtle dark:bg-neutral rounded' : 'dark:text-surface'}`}>Светлая</p>
+                            className={`transition-all w-full text-primary py-1 cursor-pointer ${!darkMode ? 'text-primary dark:text-white bg-white dark:bg-neutral rounded' : 'dark:text-surface'}`}>Светлая</p>
                     </div>
                     <Link to="/dashboard/subscription">
                         <div

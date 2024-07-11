@@ -20,7 +20,10 @@ import {DataContext} from "../../context/DataProvider";
 
 
 const Navbar = () => {
-    const {userInfo} = useContext(DataContext);
+    const {userInfo, selectedFps, setSelectedFps} = useContext(DataContext);
+    useEffect(() => {
+       console.log(selectedFps)
+    }, [])
     const location = useLocation();
     const [darkMode, setDarkMode] = useState(true);
     const [open, setOpen] = useState(false);
@@ -48,12 +51,10 @@ const Navbar = () => {
         document.documentElement.classList.remove('dark');
     };
 
-    const {selectedFps, setSelectedFps} = useContext(DataContext)
-
     return (
         <div className="px-6 py-3 border-b flex items-center justify-between border-subtle dark:border-[#444449]">
             <div
-                className={`z-[1001] transition-all dark:bg-primary fixed min-h-screen max-w-96 w-full bg-white top-0 overflow-hidden left-0 bottom-0 border-r dark:border-secondary border-subtle ${open? 'translate-x-0' : '-translate-x-full'}`}>
+                className={`z-[1001] transition-all dark:bg-primary fixed min-h-screen max-w-96 w-full bg-[#f1f1f2] top-0 overflow-hidden left-0 bottom-0 border-r dark:border-secondary border-subtle ${open? 'translate-x-0' : '-translate-x-full'}`}>
                 <div
                     className="flex px-6 py-4 items-center justify-between border-b border-subtle dark:border-[#444449] ">
                     <img src={darkMode ? logo_white : logo} className='scale-75' alt="logo"/>
@@ -230,7 +231,7 @@ const Navbar = () => {
                                 className={`transition-all w-full py-1 cursor-pointer ${darkMode ? 'text-primary dark:text-white bg-white dark:bg-neutral rounded' : 'dark:text-surface text-secondary'}`}>Темная</p>
                             <p
                                 onClick={disableDarkMode}
-                                className={`transition-all w-full text-primary py-1 cursor-pointer ${!darkMode ? 'text-primary dark:text-white bg-subtle dark:bg-neutral rounded' : 'dark:text-surface'}`}>Светлая</p>
+                                className={`transition-all w-full text-primary py-1 cursor-pointer ${!darkMode ? 'text-primary dark:text-white bg-white dark:bg-neutral rounded' : 'dark:text-surface'}`}>Светлая</p>
                         </div>
                         <Link onClick={() => setOpen(false)} to="/dashboard/subscription">
                             <div
@@ -245,14 +246,14 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex gap-2 items-center'>
+            <div className='flex gap-2 items-center w-full'>
                 <IoMdMenu className='text-2xl dark:text-white xl:hidden cursor-pointer' onClick={() => setOpen(true)}/>
                 <div
-                    className="sm:block hidden h-10 max-w-80 dark:bg-neutral w-full bg-white rounded-md border border-subtle dark:border-[#444449]">
-                    <input className="bg-transparent dark:text-white h-full px-2 text-sm outline-none appearance-none"/>
+                    className="sm:block hidden h-10 w-full max-w-80 dark:bg-neutral bg-white rounded-md border border-subtle dark:border-[#444449]">
+                    <input className="w-full placeholder:text-secondary placeholder-text-sm bg-transparent dark:text-white h-full px-2 text-sm outline-none appearance-none" placeholder={'Поиск пользователей...'}/>
                 </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 min-w-fit">
                 <div className="flex flex-col text-right">
                     <span className="font-medium text-sm dark:text-white">{userInfo.Username || 'username'}</span>
                     <span className="text-sm text-secondary dark:text-surface">

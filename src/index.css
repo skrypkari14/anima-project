@@ -57,7 +57,7 @@
 .knob {
     position: absolute;
     top: 50%;
-    left: 4px;
+    left: 2px;
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
@@ -84,7 +84,7 @@
 }
 
 .switch input:checked ~ .knob {
-    transform: translateX(10px) translateY(-50%);
+    transform: translateX(14px) translateY(-50%);
 }
 
 
