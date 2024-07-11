@@ -196,22 +196,22 @@ const Navbar = () => {
                         </Link>
                         <Link
                             onClick={() => setOpen(false)}
-                            to="/dashboard/settings"
-                            className={`flex items-center gap-2.5 text-sm hover:bg-white transition-all p-2.5 rounded-[6px] hover:dark:bg-neutral ${location.pathname === '/dashboard/settings' ? 'bg-white dark:bg-neutral drop-shadow-xl' : ''}`}
+                            to="/dashboard/profile/settings"
+                            className={`flex items-center gap-2.5 text-sm hover:bg-white transition-all p-2.5 rounded-[6px] hover:dark:bg-neutral ${location.pathname === '/dashboard/profile/settings' ? 'bg-white dark:bg-neutral drop-shadow-xl' : ''}`}
                         >
                             <div className="w-5 h-5 flex items-center">
                                 <SettingsIcon
-                                    className={`mx-auto ${location.pathname === '/dashboard/settings' ? 'fill-alert' : 'fill-secondary'}`}
+                                    className={`mx-auto ${location.pathname === '/dashboard/profile/settings' ? 'fill-alert' : 'fill-secondary'}`}
                                 />
                             </div>
                             <span
-                                className={location.pathname === '/dashboard/settings' ? 'text-primary dark:text-white' : 'text-secondary dark:text-surface'}>
+                                className={location.pathname === '/dashboard/profile/settings' ? 'text-primary dark:text-white' : 'text-secondary dark:text-surface'}>
                         Настройки
                     </span>
                         </Link>
                         <Link
                             onClick={() => setOpen(false)}
-                            to="/dashboard/support"
+                            to="https://t.me/deseption1"
                             className={`flex items-center gap-2.5 text-sm hover:bg-white transition-all p-2.5 rounded-[6px] hover:dark:bg-neutral ${location.pathname === '/dashboard/support' ? 'bg-white dark:bg-neutral drop-shadow-xl' : ''}`}
                         >
                             <div className="w-5 h-5 flex items-center">
