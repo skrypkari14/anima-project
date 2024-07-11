@@ -165,7 +165,7 @@ const Navbar = () => {
                                     <p className="text-secondary text-[14px] font-medium">FPS</p>
                                 </div>
                                 <div
-                                    className="border border-subtle dark:border-[#444449]  rounded-[4px] flex text-[12px] dark:text-surface font-medium p-[0.5px]">
+                                    className="border border-subtle dark:border-[#444449]  rounded-[4px] flex text-[12px] dark:text-surface font-medium p-[1px]">
                                     <p onClick={() => setSelectedFps(0)}
                                        className={`transition-all py-0.5 px-2 cursor-pointer ${selectedFps === 0 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>Выкл</p>
                                     <p onClick={() => setSelectedFps(1)}

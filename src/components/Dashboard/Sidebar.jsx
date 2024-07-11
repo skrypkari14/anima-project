@@ -142,7 +142,7 @@ const Sidebar = () => {
                                 </div>
                                 <p className="text-secondary text-[14px] font-medium">FPS</p>
                             </div>
-                            <div className="border border-subtle dark:border-[#444449]  rounded-[4px] flex text-[12px] dark:text-surface font-medium p-[0.5px]">
+                            <div className="border border-subtle dark:border-[#444449]  rounded-[4px] flex text-[12px] dark:text-surface font-medium p-[1px]">
                                 <p onClick={() => setSelectedFps(0)} className={`transition-all py-0.5 px-2 cursor-pointer ${selectedFps === 0 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>Выкл</p>
                                 <p onClick={() => setSelectedFps(1)} className={`transition-all w-6 flex items-center justify-center py-0.5 px-2 cursor-pointer ${selectedFps === 1 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>1</p>
                                 <p onClick={() => setSelectedFps(2)} className={`transition-all w-6 flex items-center justify-center py-0.5 px-2 cursor-pointer ${selectedFps === 2 ? 'bg-white dark:bg-neutral rounded-[2px]' : ''}`}>2</p>
