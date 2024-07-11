@@ -97,6 +97,17 @@ input[type=range]::-webkit-slider-thumb{
     outline: 5px solid #ff0037;
 }
 
+input[type=range]::-moz-range-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    outline: 5px solid #ff0037;
+}
+
 
 .custom-checkbox {
     display: inline-flex;
