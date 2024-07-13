@@ -70,7 +70,7 @@ const Referral = () => {
                         <h4 className='px-6 text-lg font-semibold text-primary dark:text-white'>Создать промокод</h4>
                         <div className={'px-6 dark:text-white'}>
                             <label>Введите промокод</label>
-                            <div className='h-10 px-2 border border-subtle rounded-md w-full mt-3'>
+                            <div className='h-10 px-2 border border-subtle dark:border-[#444449] rounded-md w-full mt-3'>
                                 <input placeholder='Введите промокод'
                                        className='w-full h-10 outline-none appearance-none bg-transparent dark:text-white text-sm text-primary'/>
                             </div>
@@ -81,12 +81,12 @@ const Referral = () => {
                         </div>
                         <div className='px-6 dark:text-white'>
                             <label>Количество активаций</label>
-                            <div className='h-10 px-2 border border-subtle rounded-md w-full mt-3'>
+                            <div className='h-10 px-2 border border-subtle dark:border-[#444449] rounded-md w-full mt-3'>
                                 <input placeholder='Введите количество активаций'
                                        className='w-full h-10 outline-none appearance-none dark:text-white  bg-transparent text-sm text-primary'/>
                             </div>
                         </div>
-                        <div className='h-[1px] w-full bg-subtle'/>
+                        <div className='h-[1px] w-full bg-subtle dark:bg-[#444449]'/>
                         <div className={'px-6'}>
                             <p className='text-sm text-secundary dark:text-white'>Стоимость создания промокода</p>
                             <p className='text-xl font-semibold text-primary mt-3 dark:text-white'>0 ₽</p>
@@ -106,7 +106,7 @@ const Referral = () => {
                     <h4 className='text-2xl font-semibold text-primary dark:text-white text-center'>Приглашайте друзей и получайте бонусы!</h4>
                     <p className='text-secundary dark:text-surface text-base text-center pt-3'>Пригласите еще 1 друга, чтобы получить скидку 25%!</p>
                     <div className={'flex flex-col md:flex-row justify-center gap-3 py-9'}>
-                        <div className='md:max-w-[450px] h-10 px-2 border border-subtle rounded-md w-full'>
+                        <div className='md:max-w-[450px] h-10 px-2 border border-subtle dark:border-[#444449] rounded-md w-full'>
                             <input defaultValue={'deseption.com/?ref=123123'} className='w-full h-10 outline-none appearance-none bg-transparent text-sm text-primary dark:text-white'/>
                         </div>
                         <div className='md:max-w-[130px] w-full'>
@@ -114,7 +114,7 @@ const Referral = () => {
                         </div>
                     </div>
                 </div>
-                <div className='px-6 md:h-32 md:py-0 md:gap-0 py-4 gap-4 grid grid-cols-1 md:grid-cols-4 border-t border-subtle dark:border-secondary'>
+                <div className='px-6 md:h-32 md:py-0 md:gap-0 py-4 gap-4 grid grid-cols-1 md:grid-cols-4 border-t border-subtle  dark:border-[#444449]'>
                     <div className='flex flex-col justify-center items-center gap-1.5'>
                         <p className={'text-primary font-semibold text-xl dark:text-white'}>{userInfo.refprocent ? `${userInfo.refprocent} %` : '0 %'}</p>
                         <p className={'text-secondary text-sm'}>Ваша скидка</p>
@@ -134,7 +134,7 @@ const Referral = () => {
                 </div>
             </div>
             <div className={'mt-6'}>
-                <div className='w-full border-b border-subtle dark:border-secondary'>
+                <div className='w-full border-b border-subtle dark:border-[#444449]'>
                     <div className='flex'>
                         <span
                             className={`py-2.5 px-3 font-medium text-sm cursor-pointer transition-all ${selectedTab === 0 ? 'border-b border-alert text-primary dark:text-white' : 'text-secondary'}`}
@@ -155,7 +155,7 @@ const Referral = () => {
                                     <SecondButton text={'Создать промокод'} onClick={() => {setOpen(true)}}/>
                                 </div>
                             </div>
-                            <div className='w-full h-[1px] bg-subtle dark:bg-secondary'></div>
+                            <div className='w-full h-[1px] bg-subtle dark:bg-[#444449]'></div>
                             <div className='px-6 pt-6'>
                                 <h4 className='text-base font-semibold text-primary dark:text-white'>Активные промокоды</h4>
                                 <div className='overflow-x-scroll xl:overflow-x-auto scroll'>

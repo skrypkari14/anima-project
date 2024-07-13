@@ -73,7 +73,7 @@ const Friends = () => {
                 {friends.map((friend, index) => (
                     <div
                         key={friend.username}
-                        className={`p-6 flex flex-col sm:flex-row justify-between items-center ${index + 1 !== friends.length ? 'border-b border-subtle dark:border-secondary' : ''}`}
+                        className={`p-6 flex flex-col sm:flex-row justify-between items-center ${index + 1 !== friends.length ? 'border-b border-subtle dark:border-[#444449]' : ''}`}
                     >
                         <div className='flex items-center gap-4'>
                             <Link to={`/dashboard/user/${friend.username}`} className='relative'>
@@ -91,7 +91,7 @@ const Friends = () => {
                                 <p className='text-secondary text-sm mt-1'>{friend.date}</p>
                             </div>
                         </div>
-                        <button className='px-5 w-full mt-2 sm:w-auto sm:mt-0 h-[40px] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'>
+                        <button className='px-5 w-full mt-2 dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] sm:w-auto sm:mt-0 h-[40px] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'>
                             Удалить
                         </button>
                     </div>

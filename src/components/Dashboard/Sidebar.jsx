@@ -202,11 +202,11 @@ const Sidebar = () => {
                     </div>
                     <Link to="/dashboard/subscription">
                         <div
-                            className="border border-subtle dark:border-[#444449]  py-[10px] mt-3 cursor-pointer flex gap-2 items-center justify-center bg-white rounded-md">
+                            className="border border-subtle dark:border-[#444449] dark:bg-neutral py-[10px] mt-3 cursor-pointer flex gap-2 items-center justify-center bg-white rounded-md">
                             <div className="w-5 h-5 flex items-center">
-                                <SubscriptionIcon className="mx-auto fill-primary"/>
+                                <SubscriptionIcon className="mx-auto fill-primary dark:fill-white"/>
                             </div>
-                            <p className="text-primary text-sm">Управление подпиской</p>
+                            <p className="text-primary text-sm dark:text-white">Управление подпиской</p>
                         </div>
                     </Link>
                 </div>

@@ -40,17 +40,17 @@ const Subscription = () => {
                                 подписку
                             </button>
                             <button
-                                className={'px-5 h-[40px] text-primary text-sm text-center font-medium border border-substle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>Активировать
+                                className={'px-5 h-[40px] text-primary text-sm text-center font-medium border border-subtle bg-white dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] rounded-[6px] hover:border-alert hover:text-alert transition-all'}>Активировать
                                 промокод
                             </button>
                         </div>
                         <button
-                            className={'px-5 h-[40px] text-primary text-sm text-center font-medium border border-substle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>Отменить
+                            className={'px-5 h-[40px] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449]'}>Отменить
                             подписку
                         </button>
                     </div>
                 </div>
-                <div className='w-full h-[1px] bg-subtle my-8'></div>
+                <div className='w-full h-[1px] bg-subtle dark:bg-[#444449] my-8'></div>
                 <div className='px-6 flex flex-col gap-2 md:flex-row items-center justify-between'>
                     <div className='flex flex-col md:flex-row gap-3 items-center'>
                         <Sparkle/>

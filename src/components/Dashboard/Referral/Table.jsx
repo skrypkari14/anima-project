@@ -10,7 +10,7 @@ const Table = () => {
                     <th className='min-w-[277px]'>
 
                     </th>
-                    <th className='p-6 min-w-[277px] border-l border-subtle dark:border-secondary  dark:border-secondary'>
+                    <th className='p-6 min-w-[277px] border-l border-subtle dark:border-secondary'>
                         <div className='flex flex-col'>
                             <div className='flex flex-col gap-2 text-left'>
                                 <span className='text-primary dark:text-white font-semibold'>Standard</span>
@@ -21,14 +21,14 @@ const Table = () => {
                             </button>
                         </div>
                     </th>
-                    <th className='p-6 min-w-[277px] border-x border-subtle dark:border-secondary  dark:border-secondary'>
+                    <th className='p-6 min-w-[277px] border-x border-subtle dark:border-secondary'>
                         <div className='flex flex-col'>
                             <div className='flex flex-col gap-2 text-left'>
                                 <span className='text-primary dark:text-white font-semibold'>Premium</span>
                                 <span className='text-alert font-medium'>750 ₽ / мес</span>
                             </div>
                             <button
-                                className={'h-10 mt-6 text-white text-[14px] font-medium text-center bg-subtle dark:bg-surface rounded-[6px] hover:bg-subtle dark:hover:bg-secondary  transition-all'}>Текущая
+                                className={'h-10 mt-6 text-surface text-[14px] font-medium text-center bg-subtle dark:bg-transparent rounded-[6px] hover:bg-subtle  transition-all'}>Текущая
                             </button>
                         </div>
                     </th>
@@ -46,7 +46,7 @@ const Table = () => {
                 </tr>
                 </thead>
                 <tbody>
-                <tr className='border-t border-subtle dark:border-secondary  dark:border-secondary'>
+                <tr className='border-t border-subtle dark:border-secondary'>
                     <td className='p-6'>
                         <p className='text-secondary font-semibold text-sm'>Функции</p>
                     </td>

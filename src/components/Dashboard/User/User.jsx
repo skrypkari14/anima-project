@@ -44,7 +44,7 @@ const User = () => {
                         <span>Добавить в друзья</span>
                     </button>
                     <button
-                        className={'px-5 h-[40px] text-primary text-sm text-center font-medium border border-[#e2e2e5] bg-white rounded-[6px] hover:border-[#ff0037] hover:text-[#ff0037] transition-all'}>Пригласить
+                        className={'px-5 h-[40px] dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] text-primary text-sm text-center font-medium border border-[#e2e2e5] bg-white rounded-[6px] hover:border-[#ff0037] hover:text-[#ff0037] transition-all'}>Пригласить
                         в игру
                     </button>
                 </div>

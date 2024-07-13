@@ -25,7 +25,7 @@ const Settings = () => {
                                 className="upload absolute inset-0 opacity-0 w-full h-full cursor-pointer"
                             />
                             <button
-                                className={'px-5 h-[40px] text-primary text-sm text-center font-medium border border-[#e2e2e5] bg-white rounded-[6px] hover:border-[#ff0037] hover:text-[#ff0037] transition-all'}>
+                                className={'px-5 h-[40px] dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] text-primary text-sm text-center font-medium border border-[#e2e2e5] bg-white rounded-[6px] hover:border-[#ff0037] hover:text-[#ff0037] transition-all'}>
                                 Загрузить файл
                             </button>
                         </div>
@@ -34,26 +34,26 @@ const Settings = () => {
                 </div>
                 <div className='dark:text-white'>
                     <label>Имя пользователя</label>
-                    <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
+                    <div className='w-full h-10 border border-[#e2e2e5] dark:border-[#444449] px-3 rounded-md mt-1.5'>
                         <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Введите логин'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Описание</label>
-                    <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
+                    <div className='w-full h-10 border border-[#e2e2e5] dark:border-[#444449] px-3 rounded-md mt-1.5'>
                         <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Введите описание'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Ссылка на профиль</label>
-                    <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
+                    <div className='w-full h-10 border border-[#e2e2e5] dark:border-[#444449] px-3 rounded-md mt-1.5'>
                         <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'deseption.ru/sunshine'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>CSS-код для ника</label>
                     <textarea
-                        className='outline-none appearance-none border border-[#e2e2e5] mt-1.5 p-3 rounded-md h-56 w-full bg-transparent'
+                        className='outline-none appearance-none border border-[#e2e2e5] dark:border-[#444449] mt-1.5 p-3 rounded-md h-56 w-full bg-transparent'
                         placeholder={'Введите CSS-код'}/>
                 </div>
                 <button
@@ -65,19 +65,19 @@ const Settings = () => {
                 <h4 className='font-semibold dark:text-white text-base'>Изменение пароля</h4>
                 <div className='dark:text-white'>
                     <label>Старый пароль</label>
-                    <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
+                    <div className='w-full h-10 border border-[#e2e2e5] dark:border-[#444449] px-3 rounded-md mt-1.5'>
                         <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Старый пароль'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Новый пароль</label>
-                    <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
+                    <div className='w-full h-10 border border-[#e2e2e5] dark:border-[#444449] px-3 rounded-md mt-1.5'>
                         <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Новый пароль'}/>
                     </div>
                 </div>
                 <div className='dark:text-white'>
                     <label>Повторите новый пароль</label>
-                    <div className='w-full h-10 border border-[#e2e2e5] px-3 rounded-md mt-1.5'>
+                    <div className='w-full h-10 border border-[#e2e2e5] dark:border-[#444449] px-3 rounded-md mt-1.5'>
                         <input className='outline-none appearance-none h-10 w-full bg-transparent' placeholder={'Повторите новый пароль'}/>
                     </div>
                 </div>

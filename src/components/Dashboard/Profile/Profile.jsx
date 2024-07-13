@@ -23,8 +23,8 @@ const Profile = () => {
                     <p>ID: 5511223</p>
                 </div>
                 <Link to={'/dashboard/profile/settings'}
-                    className={'px-5 h-[40px] max-w-[237px] flex items-center group gap-2 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
-                    <ProfileSettings className='fill-primary group-hover:fill-alert'/>
+                    className={'px-5 h-[40px] max-w-[237px] flex items-center group gap-2 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449]'}>
+                    <ProfileSettings className='fill-primary group-hover:fill-alert dark:fill-white dark:group-hover:fill-white'/>
                     <p>Редактировать профиль</p>
                 </Link>
             </div>

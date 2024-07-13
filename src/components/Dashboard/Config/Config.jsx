@@ -49,9 +49,9 @@ const Config = () => {
                 <div className='fixed z-[100] px-2 sm:px-0 w-screen h-screen bg-primary/80 left-0 top-0 flex justify-center items-center'>
                     <div className='bg-white dark:bg-neutral max-w-[460px] w-full py-6 flex flex-col justify-center rounded-md'>
                         <h4 className='px-6 text-lg font-semibold text-primary dark:text-white'>Создать конфиг из текущих настроек</h4>
-                        <div className={'p-6 border-b border-subtle dark:border-secondary dark:text-subtle'}>
+                        <div className={'p-6 border-b border-subtle dark:border-[#444449] dark:text-subtle'}>
                             <label>Название конфига</label>
-                            <div className='h-10 px-2 border border-subtle rounded-md w-full mt-3'>
+                            <div className='h-10 px-2 border border-subtle dark:border-[#444449] rounded-md w-full mt-3'>
                                 <input placeholder='Введите название'
                                        className='w-full h-10 outline-none appearance-none bg-transparent text-sm text-primary dark:text-subtle'/>
                             </div>
@@ -132,7 +132,7 @@ const Config = () => {
                                                 </button>
                                             ) : (
                                                 <button
-                                                    className={'w-full mt-6 px-5 h-[40px] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
+                                                    className={'w-full mt-6 px-5 h-[40px] dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
                                                     Активировать
                                                 </button>
                                             )}
@@ -175,7 +175,7 @@ const Config = () => {
                                                 </button>
                                             ) : (
                                                 <button
-                                                    className={'w-full mt-6 px-5 h-[40px] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
+                                                    className={'w-full mt-6 px-5 h-[40px] dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
                                                     Активировать
                                                 </button>
                                             )}
@@ -216,7 +216,7 @@ const Config = () => {
                                                 </button>
                                             ) : (
                                                 <button
-                                                    className={'w-full mt-6 px-5 h-[40px] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
+                                                    className={'w-full mt-6 px-5 h-[40px] dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
                                                     Активировать
                                                 </button>
                                             )}
@@ -269,7 +269,7 @@ const Config = () => {
                                                 </button>
                                             ) : (
                                                 <button
-                                                    className={'max-w-[112px] w-full py-1.5 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
+                                                    className={'max-w-[112px] w-full dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] py-1.5 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
                                                     Активировать
                                                 </button>
                                             )}
@@ -308,7 +308,7 @@ const Config = () => {
                                                 </button>
                                             ) : (
                                                 <button
-                                                    className={'max-w-[112px] w-full py-1.5 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
+                                                    className={'max-w-[112px] w-full dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] py-1.5 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
                                                     Активировать
                                                 </button>
                                             )}
@@ -347,7 +347,7 @@ const Config = () => {
                                                 </button>
                                             ) : (
                                                 <button
-                                                    className={'max-w-[112px] w-full py-1.5 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
+                                                    className={'max-w-[112px] w-full dark:bg-transparent dark:text-white dark:border-[#444449] dark:hover:bg-[#444449] py-1.5 text-primary text-sm text-center font-medium border border-subtle bg-white rounded-[6px] hover:border-alert hover:text-alert transition-all'}>
                                                     Активировать
                                                 </button>
                                             )}
